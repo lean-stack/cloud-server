@@ -10,7 +10,6 @@ export default function Layout({ children }: LayoutProps) {
     <>
       <Head>
         <title>Rube Servidor - A Lean Cloud Server</title>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </Head>
       <main>{children}</main>
     </>
