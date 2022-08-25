@@ -1,4 +1,10 @@
 {
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "packageManager": "pnpm@7.9.5",
   "dependencies": {
     "next": "^12.2.5",
