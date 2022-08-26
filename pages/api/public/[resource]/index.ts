@@ -13,6 +13,7 @@ export default function handler(
   switch (method) {
     case 'OPTIONS':
       res.status(204).end();
+      break;
     case 'GET':
       res.status(200).json([{ id: '1', title: 'Works' }]);
       break;
