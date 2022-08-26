@@ -8,6 +8,7 @@
   "packageManager": "pnpm@7.9.5",
   "dependencies": {
     "@heroicons/react": "^2.0.7",
+    "firebase-admin": "^11.0.1",
     "next": "^12.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
