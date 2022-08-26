@@ -4,7 +4,7 @@ export type ValidationResult = 'SUCCESS' | 'ERROR_CONTENT_TYPE' | 'ERROR_BODY';
 
 export function validateRequest(req: NextApiRequest): ValidationResult {
   const { headers, body, method } = req;
-  console.log(headers, method, body);
+
   if (['GET', 'DELETE', 'OPTIONS'].includes(method || '')) {
     return 'SUCCESS';
   }
