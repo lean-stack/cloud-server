@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse, NextConfig } from 'next';
 import { Resource } from '~/model/resource';
+import { update } from '~/module/firebase/api/collection';
 import { create, getAll } from '~/module/firebase/api/public-collection';
 import { validateRequest } from '~/utils/validate-request';
 
@@ -39,7 +40,7 @@ export default async function handler(
       res.status(201).json(createdItem);
       break;
     case 'PUT':
-      const updatedItem = await create(resourceName, body as Resource);
+      const updatedItem = await update(resourceName, body as Resource);
       res.status(200).json(updatedItem);
       break;
   }
