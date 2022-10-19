@@ -1,7 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { Resource } from '~/model/resource';
-import { update } from '~/module/firebase/api/collection';
-import { create, getAll } from '~/module/firebase/api/public-collection';
 import { validateRequest } from '~/utils/validate-request';
 
 export const config = { api: { bodyParser: { strict: true } } };
@@ -10,7 +8,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Resource | Resource[]>
 ) {
-  const allowedMethods = ['OPTIONS', 'GET', 'POST'];
+  const allowedMethods = ['OPTIONS', 'GET', 'DELETE', 'PATCH', 'PUT'];
 
   const result = validateRequest(req, allowedMethods);
   if (result !== 'SUCCESS') {
@@ -21,14 +19,16 @@ export default async function handler(
   const {
     body,
     method,
-    query: { resource },
+    query: { resource, id },
   } = req;
 
   const resourceName = resource as string;
+  const resourceId = id as string;
 
   // Set CORS methods
   res.setHeader('Access-Control-Allow-Methods', allowedMethods.join(', '));
 
+  /*
   switch (method) {
     case 'OPTIONS':
       res.status(204).end();
@@ -46,4 +46,6 @@ export default async function handler(
       res.status(200).json(updatedItem);
       break;
   }
+  */
+  res.status(200).json({ id: resourceId, resourceName, method });
 }

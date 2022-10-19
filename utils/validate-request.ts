@@ -2,10 +2,13 @@ import { NextApiRequest } from 'next';
 
 export type ValidationResult = 'SUCCESS' | 'ERROR_CONTENT_TYPE' | 'ERROR_BODY';
 
-export function validateRequest(req: NextApiRequest): ValidationResult {
+export function validateRequest(
+  req: NextApiRequest,
+  allowedMethods: string[]
+): ValidationResult {
   const { headers, body, method } = req;
 
-  if (['GET', 'DELETE', 'OPTIONS'].includes(method || '')) {
+  if (allowedMethods.includes(method || '')) {
     return 'SUCCESS';
   }
 
