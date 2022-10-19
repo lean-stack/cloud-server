@@ -35,8 +35,12 @@ export default async function handler(
       res.status(200).json(data);
       break;
     case 'POST':
-      const item = await create(resourceName, body as Resource);
-      res.status(201).json(item);
+      const createdItem = await create(resourceName, body as Resource);
+      res.status(201).json(createdItem);
+      break;
+    case 'PUT':
+      const updatedItem = await create(resourceName, body as Resource);
+      res.status(200).json(updatedItem);
       break;
   }
 }

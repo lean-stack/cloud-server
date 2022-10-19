@@ -1,4 +1,8 @@
-import { getFirestore, QueryDocumentSnapshot } from 'firebase-admin/firestore';
+import {
+  DocumentData,
+  getFirestore,
+  QueryDocumentSnapshot,
+} from 'firebase-admin/firestore';
 import { app } from './app';
 
 export const firestore = getFirestore(app);
@@ -9,6 +13,6 @@ export const converter = <T>() => ({
   fromFirestore: (snap: QueryDocumentSnapshot) => snap.data() as T,
 });
 
-// helper to apply converter to multiple collections
-export const dataPoint = <T>(collectionPath: string) =>
+// helper to apply converter to collections
+export const dataPoint = <T extends DocumentData>(collectionPath: string) =>
   firestore.collection(collectionPath).withConverter(converter<T>());

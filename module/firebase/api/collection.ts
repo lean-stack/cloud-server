@@ -12,3 +12,10 @@ export async function create(collectionPath: string, data: Resource) {
   await itemRef.set(item);
   return item;
 }
+
+export async function update(collectionPath: string, data: Resource) {
+  const itemRef = dataPoint<Resource>(collectionPath).doc(data.id);
+  const item = { ...data, id: itemRef.id };
+  await itemRef.set(item);
+  return item;
+}
