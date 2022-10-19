@@ -28,7 +28,8 @@ export default async function handler(
 
   // Set CORS methods
   res.setHeader('Access-Control-Allow-Methods', allowedMethods.join(', '));
-
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  
   switch (method) {
     case 'OPTIONS':
       res.status(204).end();
