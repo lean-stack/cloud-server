@@ -1,8 +1,0 @@
-# NPM deps
-node_modules/
-
-# Next.js runtime
-.next/
-
-# Local environment
-.env.local
