@@ -1,0 +1,22 @@
+{
+  "name": "cloud-server",
+  "description": "Lean opiniotated JSON server",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lean-stack/cloud-server.git"
+  },
+  "scripts": {
+    "dev": "npx nitropack dev",
+    "build": "npx nitropack build",
+    "preview": "node .output/server/index.mjs"
+  },
+  "dependencies": {
+    "nitropack": "^2.4.0"
+  },
+  "devDependencies": {
+    "changelogen": "^0.5.3",
+    "prettier": "^2.8.8"
+  },
+  "license": "MIT"
+}
