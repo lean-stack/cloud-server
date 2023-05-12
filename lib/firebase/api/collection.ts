@@ -26,9 +26,9 @@ export async function update(collectionPath: string, data: Resource) {
 
 export async function patch(collectionPath: string, data: Resource) {
   const itemRef = dataPoint<Resource>(collectionPath).doc(data.id);
-  await itemRef.set(data, { merge: true });
+  await itemRef.update(data);
   const doc = await itemRef.get();
-  return doc.data() as Resource;
+  return doc.data();
 }
 
 export async function remove(collectionPath: string, id: string) {
