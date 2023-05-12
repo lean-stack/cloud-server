@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v0.2.0
+
+[compare changes](https://github.com/lean-stack/cloud-server/compare/v0.1.0...v0.2.0)
+
+
+### 🚀 Enhancements
+
+  - Add all remaining routes for the public api ([7d1b25c](https://github.com/lean-stack/cloud-server/commit/7d1b25c))
+
+### ❤️  Contributors
+
+- Micha Alt ([@lean-dev](http://github.com/lean-dev))
+
 ## v0.1.0
 
 [compare changes](https://github.com/lean-stack/cloud-server/compare/v0.0.1...v0.1.0)
