@@ -14,7 +14,7 @@ export async function get(collectionPath: string, id: string) {
 export async function create(collectionPath: string, data: Resource) {
   const itemRef = dataPoint<Resource>(collectionPath).doc();
   const item = { ...data, id: itemRef.id } as Resource;
-  await itemRef.set(item);
+  await itemRef.create(item);
   return item;
 }
 
