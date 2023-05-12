@@ -1,7 +1,7 @@
 import { Resource } from '../db';
 import * as baseCollection from './collection';
 
-const collectionPath = (resourceName: string) => `/public/${resourceName}/data`;
+const collectionPath = (resourceName: string) => `/public/resources/${resourceName}`;
 
 export async function getAll(resourceName: string) {
   return baseCollection.getAll(collectionPath(resourceName));
