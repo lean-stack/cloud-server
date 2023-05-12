@@ -1,3 +1,3 @@
 ## Project: cloud-server
 
-> Lean opiniotated JSON server
+> Lean opinionated JSON server
