@@ -12,6 +12,7 @@
     "preview": "node .output/server/index.mjs"
   },
   "dependencies": {
+    "firebase-admin": "^11.8.0",
     "nitropack": "^2.4.0"
   },
   "devDependencies": {
