@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v0.3.1
+
+[compare changes](https://github.com/lean-stack/cloud-server/compare/v0.3.0...v0.3.1)
+
+
+### 🩹 Fixes
+
+  - Don't send headers twice ([ab0f67d](https://github.com/lean-stack/cloud-server/commit/ab0f67d))
+
+### ❤️  Contributors
+
+- Micha Buchholz ([@lean-dev](http://github.com/lean-dev))
+
 ## v0.3.0
 
 [compare changes](https://github.com/lean-stack/cloud-server/compare/v0.2.1...v0.3.0)
